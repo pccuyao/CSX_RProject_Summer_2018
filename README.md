@@ -9,5 +9,5 @@
 * 建立 GitHub 帳號
 * 建立第一個 Repo
 * 建立第一個 README.md
-* 第一個 [RMarkDown](/week1/hw1.rmd)
+* 第一個 [RMarkDown](https://pccuyao.github.io/Example/week1/hw1.html)
 #### 家裡
