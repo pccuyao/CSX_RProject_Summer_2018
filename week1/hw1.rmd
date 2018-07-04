@@ -18,7 +18,7 @@ HELLO WORLD
 
 ## 加法
 
-```{r echo=TRUE}
+```{r}
 
 1+1
 
@@ -45,6 +45,12 @@ HELLO WORLD
 
 ```{r}
 2^16
+```
+
+## 餘數
+
+```{r}
+5 %% 3
 ```
 
 ## R Markdown
