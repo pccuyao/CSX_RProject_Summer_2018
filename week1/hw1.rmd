@@ -1,17 +1,18 @@
 ---
-title: "hw1"
+title: "HW1"
 author: "Yao"
-date: "2018¦~7¤ë4¤é"
+date: "2018å¹´7æœˆ4æ—¥"
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-#Hello World
-* §A¦n°Ú¡I
+# ä½ å¥½å‘€!
+
 
 ## R Markdown
+
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
