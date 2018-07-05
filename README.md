@@ -9,6 +9,6 @@
 * 建立 GitHub 帳號
 * 建立第一個 Repo
 * 建立第一個 README.md
-* 第一個 RmarkDown [homework-1](https://pccuyao.github.io/Example/week1/hw1.html)
-* RMarkDown 的 [練習](https://pccuyao.github.io/Example/week1/RMARK_EXER.html)
+* 第一個 RmarkDown [homework-1](https://pccuyao.github.io/CSX_RProject_Summer_2018/week1/hw1.html)
+* RMarkDown 的 [練習](https://pccuyao.github.io/CSX_RProject_Summer_2018/week1/RMARK_EXER.html)
 #### 家裡
