@@ -1,5 +1,5 @@
 ﻿# 107 學年度夏季學院[資料科學程式設計]
-> 這個Repositories主要是紀錄我修習107學年度夏季學院課程[資料科學程式設計]的學習歷程，包含了許多我學習的成果、心得與摘要，歡迎各位大家來參觀！
+> 這個 Repositories 主要是紀錄我修習 **107學年度夏季學院課程 - "資料科學程式設計"** 的學習歷程，包含了許多我學習的成果、心得與摘要，歡迎各位大家來參觀！
 ## 自我介紹
 * 大家好 我是姚承佑！
 * 我目前就讀中國文化大學音樂學系，二年級。
@@ -17,4 +17,4 @@
 * RMarkDown 的 [練習](https://pccuyao.github.io/CSX_RProject_Summer_2018/week1/RMARK_EXER.html)
 #### 家裡
 * 持續的完成本周的指派的 Task -> 繼續在 DataCamp 上的學習。
-* 持續的編寫有關 RMarkDwon 的學習[紀錄](https://pccuyao.github.io/CSX_RProject_Summer_2018/week1/RMARK_EXER.html)。(與上方RMarkdown 的 `練習` 是同一檔案。)
+* 持續的編寫有關 RMarkDwon 的學習[紀錄](https://pccuyao.github.io/CSX_RProject_Summer_2018/week1/RMARK_EXER.html)。(與上方RMarkdown 的 **練習** 是同一檔案。)
