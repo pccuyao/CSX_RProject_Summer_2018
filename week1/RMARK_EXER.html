@@ -9,7 +9,7 @@
 <meta name="generator" content="pandoc" />
 
 
-<meta name="author" content="Yao" />
+<meta name="author" content="C.U. Yao" />
 
 
 <title>R_Lang_Exer</title>
@@ -122,7 +122,7 @@ $(document).ready(function () {
 
 
 <h1 class="title toc-ignore">R_Lang_Exer</h1>
-<h4 class="author"><em>Yao</em></h4>
+<h4 class="author"><em>C.U. Yao</em></h4>
 <h4 class="date"><em>2018年7月7日</em></h4>
 
 </div>
@@ -131,6 +131,9 @@ $(document).ready(function () {
 <hr />
 <div class="section level1">
 <h1>學習摘要</h1>
+<ul>
+<li>這裡是我學習R語言與RMarkdown的學習摘要，日期的標註是指章節建立的日期，日後都會有可能對前內容做出修改。</li>
+</ul>
 <hr />
 <div class="section level2">
 <h2>2018/7/4 (三)</h2>
@@ -145,11 +148,18 @@ $(document).ready(function () {
 <li><p><code>```</code></p></li>
 </ul></li>
 </ul>
+<blockquote>
+<p>“Ctrl + Alt + I” 可以快速在編輯區中插入R語言片段</p>
+</blockquote>
+<ul>
+<li>另需注意的是，雖然程式碼就像被“框”起來一般，但實際上並不是每個區段都獨立，而是都是共通的。在上一個區段宣告過的變數並不需要重新再宣告一次。有關RMarkdown的部分，之後會再繼續學習與探討。</li>
+</ul>
 </div>
 <div class="section level3">
 <h3>基本運算子</h3>
 <ul>
-<li>加法</li>
+<li><p>以下是R語言的基本運算子，另外、我們可以直接在程式碼或是Console中輸入運算式，來得到運算結果。</p></li>
+<li><p>加法</p></li>
 </ul>
 <pre class="r"><code>1+1</code></pre>
 <pre><code>## [1] 2</code></pre>
@@ -183,9 +193,55 @@ $(document).ready(function () {
 </div>
 <div class="section level2">
 <h2>2018/7/7 (六)</h2>
+</div>
+<div class="section level2">
+<h2>變數的宣告</h2>
 <ul>
-<li>尚未編輯…</li>
+<li>在R中，變數的宣告相當的簡潔。</li>
 </ul>
+<pre class="r"><code>#變數的宣告
+Hamburger &lt;- 32
+#Print out
+Hamburger</code></pre>
+<pre><code>## [1] 32</code></pre>
+<pre class="r"><code>#Print out of calculate variable
+Hamburger * 2</code></pre>
+<pre><code>## [1] 64</code></pre>
+</div>
+<div class="section level2">
+<h2>基本資料類別</h2>
+<ul>
+<li>R 有眾多資料類別，以下是較為基本的：
+<ul>
+<li>數值(Numeric)：49.32</li>
+<li>整數(Integer)：49</li>
+<li>邏輯值(Logical)：TRUE，FALSE</li>
+<li>文字(Characters)：“banana”</li>
+</ul></li>
+<li>其中特別的是數值是指有小數的數。</li>
+<li>在宣告變數時，變數的資料類別會直接從其宣告的形式或資料的內容來確立。</li>
+<li>要注意R語言是會區分字母大小的。</li>
+</ul>
+<pre class="r"><code># Create Numeric
+my_pi &lt;- 3.1415926
+# Create Integer
+my_fafafafa &lt;- 8888
+# Create Logical
+my_logical &lt;- TRUE
+# Create Characters
+my_name &lt;- &quot;Yao&quot;
+# 只要使用雙引號，就會直接被歸類成字串</code></pre>
+<ul>
+<li>另外，我們可以使用 <code>class()</code> 這個函數來檢視資料類別。</li>
+</ul>
+<pre class="r"><code>class(my_pi)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<pre class="r"><code>class(my_fafafafa)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<pre class="r"><code>class(my_logical)</code></pre>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+<pre class="r"><code>class(my_name)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
 </div>
 </div>
 

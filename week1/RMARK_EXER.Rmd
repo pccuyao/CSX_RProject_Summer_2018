@@ -1,6 +1,6 @@
 ---
 title: "R_Lang_Exer"
-author: "Yao"
+author: "C.U. Yao"
 date: "2018年7月7日"
 output: html_document
 ---
@@ -8,6 +8,7 @@ output: html_document
 ***
 
 # 學習摘要
+* 這裡是我學習R語言與RMarkdown的學習摘要，日期的標註是指章節建立的日期，日後都會有可能對前內容做出修改。
 
 ***
 
@@ -24,8 +25,13 @@ output: html_document
   
     * ` ``` `
     
+> "Ctrl + Alt + I" 可以快速在編輯區中插入R語言片段
+
+* 另需注意的是，雖然程式碼就像被"框"起來一般，但實際上並不是每個區段都獨立，而是都是共通的。在上一個區段宣告過的變數並不需要重新再宣告一次。有關RMarkdown的部分，之後會再繼續學習與探討。
 
 ### 基本運算子
+
+* 以下是R語言的基本運算子，另外、我們可以直接在程式碼或是Console中輸入運算式，來得到運算結果。
 
 * 加法
 
@@ -68,4 +74,43 @@ output: html_document
 
 ## 2018/7/7 (六)
 
-* 尚未編輯...
+## 變數的宣告
+* 在R中，變數的宣告相當的簡潔。
+
+```{r}
+#變數的宣告
+Hamburger <- 32
+#Print out
+Hamburger
+#Print out of calculate variable
+Hamburger * 2
+```
+
+## 基本資料類別
+* R 有眾多資料類別，以下是較為基本的：
+    * 數值(Numeric)：49.32
+    * 整數(Integer)：49
+    * 邏輯值(Logical)：TRUE，FALSE
+    * 文字(Characters)："banana"
+* 其中特別的是數值是指有小數的數。
+* 在宣告變數時，變數的資料類別會直接從其宣告的形式或資料的內容來確立。
+* 要注意R語言是會區分字母大小的。
+```{r}
+# Create Numeric
+my_pi <- 3.1415926
+# Create Integer
+my_fafafafa <- 8888
+# Create Logical
+my_logical <- TRUE
+# Create Characters
+my_name <- "Yao"
+# 只要使用雙引號，就會直接被歸類成字串
+```
+* 另外，我們可以使用 ` class() ` 這個函數來檢視資料類別。
+```{r}
+class(my_pi)
+class(my_fafafafa)
+class(my_logical)
+class(my_name)
+```
+
