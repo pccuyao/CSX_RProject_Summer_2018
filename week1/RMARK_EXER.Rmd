@@ -1,7 +1,7 @@
 ---
 title: "R_Lang_Exer"
 author: "C.U. Yao"
-date: "2018年7月7日"
+date: "2018年7月8日"
 output: html_document
 ---
 
@@ -113,4 +113,81 @@ class(my_fafafafa)
 class(my_logical)
 class(my_name)
 ```
+## 向量
+* 使用 ` c() ` 來建立向量
+```{r}
+abc <- c("apple","banana","caves")
+abc
+```
+* 元素的命名
+    * 可使用 ` names() ` 來對元素命名(向量、矩陣等都可)
+```{r}
+names(abc) <- c("A","B","C")
+abc
+```
+* 向量可透過以下方式進行計算
+```{r}
+X_vector <- c(1, 2, 3)
+Y_vector <- c(4, 5, 6)
+
+total_vector <- X_vector + Y_vector
+  
+total_vector
+```
+* 可使用 ` sum() ` 來加總向量中所有的元素
+```{r}
+total_vector
+sumtotal <- sum(total_vector)
+```
+* 若選擇向量中的元素，應使用 ` [] ` 來選擇。要注意的是，R語言的第一個元素的索引值是 1，不像其他程式語言第一個元素的索引值是 0。
+```{r}
+select_total <- total_vector[1]
+select_total
+```
+* 多重選擇時應使用 ` c() ` 函數。
+```{r}
+select_total <- total_vector[c(1,2)]
+select_total
+```
+
+* 除了使用索引值來選擇外，也可使用元素的名稱來選擇。
+```{r}
+names(total_vector) <- c("pizza","cake","coffee")
+select_total2 <- total_vector["pizza"]
+select_total2
+# muli
+select_total2 <- total_vector[c("pizza","coffee")]
+select_total2
+```
+
+* 可直接使用比較運算子來判斷真假
+```{r}
+sumtotal
+sumtotal > 30
+# sumtotal 的值為21 由此可知並不大於30
+
+#向量中元素的比較
+total_vector
+total_vector > 4
+```
+* 以下為R的比較運算子
+    * "< " 小於(for less than)
+    * "> " 大於(for greater than)
+    * "<=" 小於或等於(for less than or equal to)
+    * ">=" 大於或等於(for greater than or equal to)
+    * "==" 等於(for equal to each other)
+    * "!=" 不等於(not equal to each other)
+* 我們可以使用比較的結果來進行選擇，R會自動選擇"TRUE"的結果。
+```{r}
+total_vector
+com_8_res <- total_vector[total_vector < 8]
+com_8_res
+#可以看到只有小於8的5和7被選擇，9因為比8大，所以並沒有被選擇進來。
+```
+
+# 參考來源
+* 以上內容有參考以下來源之部分論述與程式碼
+    * CornelissenJonathan. (2018年7月8日). Introduction to R. 擷取自 DataCamp:                https://www.datacamp.com/courses/free-introduction-to-r
+    * KuoYao-Jen. (2016年7月16日). R 語言導論. 擷取自 DataCamp: https://www.datacamp.com/community/open-courses/r-語言導論
+
 
