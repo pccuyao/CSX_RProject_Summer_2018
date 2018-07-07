@@ -165,8 +165,10 @@ select_total2
 sumtotal
 sumtotal > 30
 # sumtotal 的值為21 由此可知並不大於30
+```
 
-#向量中元素的比較
+* 向量中元素的比較
+```{r}
 total_vector
 total_vector > 4
 ```
