@@ -120,7 +120,7 @@ abc <- c("apple","banana","caves")
 abc
 ```
 * 元素的命名
-    * 可使用 ` names() ` 來對元素命名(向量、矩陣等都可)
+    * 可使用 ` names() ` 來對元素命名
 ```{r}
 names(abc) <- c("A","B","C")
 abc
@@ -187,9 +187,114 @@ com_8_res
 #可以看到只有小於8的5和7被選擇，9因為比8大，所以並沒有被選擇進來。
 ```
 
+# 2018/7/8 (日)
+
+## 矩陣
+
+* 使用 ` matrix(elements,byrow,nrow) ` 來建立矩陣。
+
+```{r}
+matrix(1:9,byrow = TRUE, nrow = 3)
+```
+* 其中的參數解釋如下：
+    * 1:9 -> 陣列的元素，此處指 ` c(1,2,3,4,5,6,7,8,9) `。
+    * byrow = TRUE -> 擺放方式，TRUE為列、FALSE為欄
+    * nrow = 3 -> 以三列方式進行排序，其中 ` nrow = 3 ` 可直接被省略成 ` 3 `。
+* 如同向量、矩陣中的元素也可以被命名(這個說法其實不大正確)，但是概念不大一樣。在向量中，他是單一維度的陣列，所以與其說是為元素命名，不如說所作的事情就像是在為欄位命名一樣(因為只有一列)；而矩陣是個二維陣列，所以我們可以做的事情是對列與欄進行命名。
+*我們可以使用 ` rownames(my_matrix) ` 及 `colnames(my_matrix) ` 來對矩陣的列與欄命名。
+
+```{r}
+# Box office Harry Potter (in millions) 
+Philosopher_Stone <- c(317,657)
+Chamber_of_Secrets <- c(261,616)
+Prisoner_of_Azkaban <- c(249,547)
+# Matrix Create
+Harry_Potter <- matrix(c(Philosopher_Stone,Chamber_of_Secrets,Prisoner_of_Azkaban),byrow = TRUE, nrow = 3)
+# name it
+region <- c("US", "non-US")
+titles <- c("Philosopher Stone", "Chamber of Secrets", "Prisoner of Azkaban")
+# 用 region 為欄命名 
+colnames(Harry_Potter)<-region
+
+# 用 titles 為列命名
+rownames(Harry_Potter)<-titles
+# Show it
+Harry_Potter
+```
+* 我們可以利用 `rowSums(my_matrix)` 來計算矩陣中每一列的總和；使用 `colSums(my_matrix)` 來計算每一欄的總和。
+```{r}
+rowSums(Harry_Potter)
+colSums(Harry_Potter)
+```
+* 我們可以利用 `cbind(matrix1,matrix2) ` 來結合矩陣欄
+```{r}
+cbind(Harry_Potter,rowSums(Harry_Potter))
+#　直接加入的話並不會有欄位的名稱，但如果先行定義變數，就會自動將變數的值帶入。
+# Ex 1
+Play_times <- c(12,23,34)
+cbind(Harry_Potter,Play_times)
+# Ex 2
+Harry_Potter_total <- rowSums(Harry_Potter)
+cbind(Harry_Potter,Harry_Potter_total)
+```
+* 結合矩陣列的話，就要使用 `rbind(matrix1,matrix2) ` 。
+```{r}
+# other movies of harrypotter
+Goblet_of_Fire <- c(290,896)
+Order_of_the_Phoenix <- c(292,647)
+Half_Blood_Prince <- c(301,632)
+Deathly_Hallows1 <- c(295,664)
+Deathly_Hallows2 <- c(381,960)
+Harry_Potter2 <- 
+matrix(
+  c(
+    Goblet_of_Fire,Order_of_the_Phoenix,Half_Blood_Prince,Deathly_Hallows1,Deathly_Hallows2
+   ),
+  nrow = 5, byrow = TRUE,
+  dimnames = list #可以直接使用dimnames 來命名、清單的用法之後會說。
+    (
+      c("Goblet of Fire", "Order of the Phoenix", "Half-Blood Prince",
+       "Deathly Hallows 1","Deathly Hallows 2"), 
+      c("US", "non-US")
+    )
+  ) 
+# combine it
+Harry_Potter_All <- rbind(Harry_Potter,Harry_Potter2)
+Harry_Potter_All
+```
+* 若要選取矩陣中的元素，應使用 `my_matrix[row,columns]` 。
+* 由於矩陣是一個二維陣列，所以需要分別指定列與欄的相對位置。
+```{r}
+# 選取第一列第二行
+Harry_Potter_All[1,2]
+# 選取第一至第四列的第二行
+Harry_Potter_All[1:4,2]
+# 選取全部的第二行
+Harry_Potter_All[,2]
+# 有關欄的選取，同理反證。
+```
+* 另外 我們可以使用 ` mean() ` 函數來計算平均值。
+```{r}
+# 哈利波特八部電影的美國外平均票房
+mean(Harry_Potter_All[,2])
+```
+* 可以直接將矩陣進行數學運算，矩陣中的所有元素會一同被獨立運算。
+```{r}
+Harry_Potter_All / 2
+
+#矩陣的互算
+Apple_P <- matrix(c(20,30,40),byrow=TRUE,3)
+Apple_Q <- matrix(c(60,50,20),byrow=TRUE,3)
+Apple_R <- Apple_P * Apple_Q
+Apple_R
+```
+
+## 因素向量
+
+
 # 參考來源
 * 以上內容有參考以下來源之部分論述與程式碼
     * CornelissenJonathan. (2018年7月8日). Introduction to R. 擷取自 DataCamp:                https://www.datacamp.com/courses/free-introduction-to-r
     * KuoYao-Jen. (2016年7月16日). R 語言導論. 擷取自 DataCamp: https://www.datacamp.com/community/open-courses/r-語言導論
-
-
+* Harry Potter 票房資料
+    * IMDb.com, Inc. (2018年7月8日). Total Lifetime Grosses. 擷取自 Box Office Mojo: http://www.boxofficemojo.com/
