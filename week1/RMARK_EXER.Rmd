@@ -290,7 +290,57 @@ Apple_R
 ```
 
 ## 因素向量
+* 變數有分為類別型變數(categorical variable)與連續型變數(continuous variable )
+* 在類別型變數中，有分有比較級與無比較級(又稱順序類別(nominal categorical variable)與名目類別(ordinal categorical variable))
+* 可用 `levels()` 來設定類別型變數的名稱
+```{r}
+sex <- c("F", "F", "F", "M", "M") 
+factor_sex <- factor(sex) # 對sex向量設定為因素向量(類別型變數)
+levels(factor_sex) <- c("Female","Male")
+factor_sex
+```
+* `summary(my_data)` 可展示資料的摘要(向量、因素向量等...)
+```{r}
+summary(sex)
+summary(factor_sex)
+```
+* 非比較級(名目類別)的因素向量是沒有辦法被比較的。。
+```{r}
+factor_sex[1] > factor_sex[2]
+```
+*若要建立比較級(順序類別)，則需在建立因素向量時多輸入幾個參數與設定。
+```{r}
+speed_f<- factor(c("fast","fast","slow","slow","insane","fast"), 
+       ordered = TRUE, # 設定為順序類別
+       levels = c("slow","fast","insane") # 設定正確的比較級數 (由小到大)
+       )
+speed_f
+summary(speed_f)
+```
+* 比較級(順序類別)的因素向量就可以被比較了。
+```{r}
+speed_f[1] > speed_f[3]
+speed_f[1] > speed_f[5]
+```
+* 對此章節作個簡單的整理
+    * 變數有分類別型變數與連續型變數。
+    * 類別型變數中有分順序類別與名目類別。
+    * 向量作為變數的一種，一般的向量為連續型變數，因素向量則為類別型變數。
+    * 因素向量的順序類別與名目類別又稱為順序型因素向量與名目型因素向量。
+* 由於用文字解釋實在是太複雜了，所以用樹狀圖呈現比較好吧。
 
+-------
+
+* 中文版
+    * ![](point1/point1-1.PNG)
+        
+        -----------
+        
+* 英文版
+    * ![](point1/point1-2.PNG)
+    
+        ------------
+* [PPT](point1.pptx)
 
 # 參考來源
 * 以上內容有參考以下來源之部分論述與程式碼
