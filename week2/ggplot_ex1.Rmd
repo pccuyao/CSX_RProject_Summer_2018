@@ -21,7 +21,7 @@ mpg
  
 # rain
  rn <- read.csv("Rain.csv")
-map <- get_map(location = 'Taiwan', zoom = 7)
-ggmap(map) + geom_point(aes(x = TWD67Lon, y = TWD67Lat, size = Now), data = rn)
+map <- get_map(location = 'Taiwan', zoom = 8)
+ggmap(map) +geom_point(aes(x = TWD67Lon, y = TWD67Lat,color= Now ,alpha = Now), data = rn)+ggtitle("日累積降雨量  \n 單位：毫米 \n 資料來源：政府資料公開平台")
 ```
 
