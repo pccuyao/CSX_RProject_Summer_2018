@@ -19,4 +19,4 @@
 * 持續的完成本周的指派的 Task -> 繼續在 DataCamp 上的學習。
 * 持續的編寫有關 RMarkDwon 的學習[紀錄](https://pccuyao.github.io/CSX_RProject_Summer_2018/week1/RMARK_EXER.html)。(與上方RMarkdown 的 **練習** 是同一檔案。)
 ### 第二周
-* ggplot2 的 [練習] (https://pccuyao.github.io/CSX_RProject_Summer_2018/week2/ggplot_ex1.html)
+* ggplot2 的 [練習](https://pccuyao.github.io/CSX_RProject_Summer_2018/week2/ggplot_ex1.html)
