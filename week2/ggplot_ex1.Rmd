@@ -5,8 +5,11 @@ date: "2018年7月11日"
 output: html_document
 ---
 
+
 ```{r}
 library(ggplot2)
+library(ggmap)
+library(mapproj)
 mpg
 # Single 類別
  ggplot(data=mpg,aes(x=class))+geom_bar(fill = "red", colour = "blue")
@@ -14,7 +17,11 @@ mpg
  ggplot(data = mpg, aes(x = displ)) + geom_histogram(binwidth = 1)
 # Double 類別 
  ggplot(data = mpg, aes(x = year,y= cty)) + geom_line(size=8)
- ggplot(data = mpg, aes(x = displ,y= cty)) + geom_point(color=class,size = 6)
+ ggplot(data = mpg, aes(x = displ,y= cty,color=class)) + geom_point()
  
+# rain
+ rn <- read.csv("Rain.csv")
+map <- get_map(location = 'Taiwan', zoom = 7)
+ggmap(map) + geom_point(aes(x = TWD67Lon, y = TWD67Lat, size = Now), data = rn)
 ```
 
