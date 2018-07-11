@@ -1,0 +1,20 @@
+---
+title: "R_ggplot2_Exer"
+author: "Yao"
+date: "2018年7月11日"
+output: html_document
+---
+
+```{r}
+library(ggplot2)
+mpg
+# Single 類別
+ ggplot(data=mpg,aes(x=class))+geom_bar(fill = "red", colour = "blue")
+# Single 順序 
+ ggplot(data = mpg, aes(x = displ)) + geom_histogram(binwidth = 1)
+# Double 類別 
+ ggplot(data = mpg, aes(x = year,y= cty)) + geom_line(size=8)
+ ggplot(data = mpg, aes(x = displ,y= cty)) + geom_point(color=class,size = 6)
+ 
+```
+
