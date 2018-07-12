@@ -1,0 +1,107 @@
+---
+title: "Text_Ex"
+author: "Yao"
+date: "2018å¹?7???11?—¥"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(xml2)
+library(tmcn)
+library(rvest)
+
+library(NLP)
+library(tm)
+library(jiebaRD)
+library(jiebaR)
+library(RColorBrewer)
+library(wordcloud)
+
+setwd(dirname(rstudioapi::getSourceEditorContext()$path))
+getwd()
+filenames <- list.files(getwd(), pattern="*.txt")
+files <- lapply(filenames, readLines)
+docs <- Corpus(VectorSource(files))
+#ç§»é™¤?¯?ƒ½??‰å?é?Œç?„ç¬¦???
+toSpace <- content_transformer(function(x, pattern) {
+  return (gsub(pattern, " ", x))
+}
+)
+
+docs <- tm_map(docs, toSpace, "?€?")
+docs <- tm_map(docs, toSpace, "???")
+docs <- tm_map(docs, toSpace, "?€?")
+docs <- tm_map(docs, toSpace, "?Ž¨")
+docs <- tm_map(docs, toSpace, "???")
+docs <- tm_map(docs, toSpace, "???")
+docs <- tm_map(docs, toSpace, "???")
+docs <- tm_map(docs, toSpace, "?˜¯")
+docs <- tm_map(docs, toSpace, "äº?")
+docs <- tm_map(docs, toSpace, "???")
+docs <- tm_map(docs, toSpace, "ä¹?")
+docs <- tm_map(docs, toSpace, "å°?")
+docs <- tm_map(docs, toSpace, "?ƒ½")
+docs <- tm_map(docs, toSpace, "ä¸?")
+docs <- tm_map(docs, toSpace, "è¢?")
+docs <- tm_map(docs, toSpace, "?ˆ°")
+docs <- tm_map(docs, toSpace, "å¥?")
+docs <- tm_map(docs, toSpace, "???")
+docs <- tm_map(docs, toSpace, "ä½?")
+docs <- tm_map(docs, toSpace, "ä½?")
+docs <- tm_map(docs, toSpace, "è·?")
+docs <- tm_map(docs, toSpace, "?ƒ½")
+docs <- tm_map(docs, toSpace, "???")
+docs <- tm_map(docs, toSpace, "?›´")
+docs <- tm_map(docs, toSpace, "?ª")
+docs <- tm_map(docs, toSpace, "?‡º")
+docs <- tm_map(docs, toSpace, "?˜¿")
+docs <- tm_map(docs, toSpace, "?˜¯")
+docs <- tm_map(docs, toSpace, "?§")
+docs <- tm_map(docs, toSpace, "?˜¯")
+docs <- tm_map(docs, toSpace, "?€?")
+docs <- tm_map(docs, toSpace, "?‚º")
+docs <- tm_map(docs, toSpace, "???")
+docs <- tm_map(docs, toSpace, "???")
+docs <- tm_map(docs, toSpace, "???")
+docs <- tm_map(docs, toSpace, "???")
+docs <- tm_map(docs, toSpace, "å¾?")
+docs <- tm_map(docs, toSpace, "æ¨™é??")
+docs <- tm_map(docs, toSpace, "???")
+docs <- tm_map(docs, toSpace, "???")
+docs <- tm_map(docs, toSpace, "???")
+docs <- tm_map(docs, toSpace, "ç¶²å?€")
+docs <- tm_map(docs, toSpace, "???")
+docs <- tm_map(docs, toSpace, "ä»€éº?")
+docs <- tm_map(docs, toSpace, "??‹æ¿")
+docs <- tm_map(docs, toSpace, "ä½œè€?")
+docs <- tm_map(docs, toSpace, "?™¼ä¿¡ç??")
+docs <- tm_map(docs, toSpace, "?‰¹è¸¢è¸¢å¯¦æ¥­???")
+docs <- tm_map(docs, toSpace, "[a-zA-Z]")
+#ç§»é™¤æ¨™é?žç¬¦??? (punctuation)
+#ç§»é™¤?•¸å­? (digits)?€ç©º?™½ (white space)
+docs <- tm_map(docs, removePunctuation)
+docs <- tm_map(docs, removeNumbers)
+docs <- tm_map(docs, stripWhitespace)
+docs
+#
+library(jiebaR)
+
+#
+mixseg = worker()
+jieba_tokenizer=function(d){
+  unlist(segment(d[[1]],mixseg))
+}
+seg = lapply(docs, jieba_tokenizer)
+freqFrame = as.data.frame(table(unlist(seg)))
+freqFrame = freqFrame[-c(1:34),]
+wordcloud(freqFrame$Var1,freqFrame$Freq,
+          scale=c(5,0.5),min.freq=10,max.words=50,
+          random.order=FALSE, random.color=TRUE, 
+          rot.per=0, colors=brewer.pal(8, "Dark2"),
+          ordered.colors=FALSE,use.r.layout=FALSE,
+          fixed.asp=TRUE)
+
+```
+
