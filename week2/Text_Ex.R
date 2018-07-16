@@ -1,20 +1,32 @@
+# 文字雲製作
+## 導入老師寫的函式與其他資源
+
 source("pttTestFunction.R")
-id = c(6430:6535)
-name_post <- "MobileComm"
-URL = paste0("https://www.ptt.cc/bbs/",name_post,"/index", id, ".html")
-filename = paste0(id, ".txt")
-#mapply(pttTestFunction, 
- #      URL = URL, filename = filename)
-
-
-## 2
-rm(list=ls(all.names = TRUE))
 library(NLP)
 library(tm)
 library(jiebaRD)
 library(jiebaR)
 library(RColorBrewer)
+library(knitr)
 library(wordcloud)
+library(jiebaR)
+library(wordcloud2)
+
+## 進行資料蒐集，並存成文字檔
+
+id = c(6443:6453)
+name_post <- "MobileComm" # 目標是手機版
+URL = paste0("https://www.ptt.cc/bbs/",name_post,"/index", id, ".html")
+filename = paste0(id, ".txt")
+Open_Star <- c(FALSE) # 這是開關
+if(Open_Star == TRUE){
+  pttTestFunction(URL[1], filename[1])
+  mapply(pttTestFunction,
+         URL = URL, filename = filename)}
+
+## 進行文字清洗
+## 2
+rm(list=ls(all.names = TRUE))
 filenames <- list.files(getwd(), pattern="*.txt")
 files <- lapply(filenames, readLines)
 docs <- Corpus(VectorSource(files))
@@ -23,56 +35,18 @@ toSpace <- content_transformer(function(x, pattern) {
   return (gsub(pattern, " ", x))
 }
 )
-
-docs <- tm_map(docs, toSpace, "※")
-docs <- tm_map(docs, toSpace, "◆")
-docs <- tm_map(docs, toSpace, "‧")
-docs <- tm_map(docs, toSpace, "推")
-docs <- tm_map(docs, toSpace, "噓")
-docs <- tm_map(docs, toSpace, "的")
-docs <- tm_map(docs, toSpace, "我")
-docs <- tm_map(docs, toSpace, "是")
-docs <- tm_map(docs, toSpace, "了")
-docs <- tm_map(docs, toSpace, "有")
-docs <- tm_map(docs, toSpace, "也")
-docs <- tm_map(docs, toSpace, "就")
-docs <- tm_map(docs, toSpace, "都")
-docs <- tm_map(docs, toSpace, "不")
-docs <- tm_map(docs, toSpace, "被")
-docs <- tm_map(docs, toSpace, "到")
-docs <- tm_map(docs, toSpace, "好")
-docs <- tm_map(docs, toSpace, "會")
-docs <- tm_map(docs, toSpace, "但")
-docs <- tm_map(docs, toSpace, "你")
-docs <- tm_map(docs, toSpace, "跟")
-docs <- tm_map(docs, toSpace, "能")
-docs <- tm_map(docs, toSpace, "嗎")
-docs <- tm_map(docs, toSpace, "更")
-docs <- tm_map(docs, toSpace, "只")
-docs <- tm_map(docs, toSpace, "出")
-docs <- tm_map(docs, toSpace, "阿")
-docs <- tm_map(docs, toSpace, "是")
-docs <- tm_map(docs, toSpace, "吧")
-docs <- tm_map(docs, toSpace, "是")
-docs <- tm_map(docs, toSpace, "這")
-docs <- tm_map(docs, toSpace, "為")
-docs <- tm_map(docs, toSpace, "啊")
-docs <- tm_map(docs, toSpace, "喔")
-docs <- tm_map(docs, toSpace, "又")
-docs <- tm_map(docs, toSpace, "和")
-docs <- tm_map(docs, toSpace, "很")
-docs <- tm_map(docs, toSpace, "標題")
-docs <- tm_map(docs, toSpace, "過")
-docs <- tm_map(docs, toSpace, "再")
-docs <- tm_map(docs, toSpace, "因")
-docs <- tm_map(docs, toSpace, "網址")
-docs <- tm_map(docs, toSpace, "和")
-docs <- tm_map(docs, toSpace, "什麼")
-docs <- tm_map(docs, toSpace, "看板")
-docs <- tm_map(docs, toSpace, "作者")
-docs <- tm_map(docs, toSpace, "發信站")
-docs <- tm_map(docs, toSpace, "批踢踢實業坊")
-docs <- tm_map(docs, toSpace, "[a-zA-Z]")
+ignore_text <- c(
+  "※","◆","‧","推","噓","的","我","是","了","有",
+  "用","在","沒","還","看","要","啦","多","上","說",
+  "真",
+  "也","就","都","不","被","到","好","會","但","你",
+  "跟","能","嗎","更","只","出","阿","是","吧","是",
+  "這","為","啊","喔","又","和","很","過","再","因",
+  "和","標題","網址","什麼","看板","作者","可以",
+  "發信站","批踢踢實業坊","[a-zA-Z]")
+for(ignore in ignore_text){
+  docs<- tm_map(docs, toSpace, ignore)
+}
 #移除標點符號 (punctuation)
 #移除數字 (digits)、空白 (white space)
 docs <- tm_map(docs, removePunctuation)
@@ -80,7 +54,8 @@ docs <- tm_map(docs, removeNumbers)
 docs <- tm_map(docs, stripWhitespace)
 docs
 #
-library(jiebaR)
+
+## 詞頻矩陣
 
 #
 mixseg = worker()
@@ -89,10 +64,23 @@ jieba_tokenizer=function(d){
 }
 seg = lapply(docs, jieba_tokenizer)
 freqFrame = as.data.frame(table(unlist(seg)))
-freqFrame = freqFrame[-c(1:34),]
+freqFrame = freqFrame[order(freqFrame$Freq,decreasing=TRUE), ]
+kable(head(freqFrame), format = "markdown")
+
+## 建立文字雲
+
 wordcloud(freqFrame$Var1,freqFrame$Freq,
-          scale=c(5,0.5),min.freq=10,max.words=50,
-          random.order=FALSE, random.color=TRUE, 
+          scale=c(6,0.5),min.freq=10,max.words=60,
+          random.order=FALSE, random.color=FALSE, 
           rot.per=0, colors=brewer.pal(8, "Dark2"),
           ordered.colors=FALSE,use.r.layout=FALSE,
           fixed.asp=TRUE)
+
+#　手機版想必手機這個字最多呢！
+
+## 其他的文字雲
+
+
+wordcloud2(freqFrame[1:300,], size = 0.5,shape = 'pentagon')
+
+
