@@ -25,7 +25,6 @@ if(Open_Star == TRUE){
          URL = URL, filename = filename)}
 
 ## 進行文字清洗
-## 2
 rm(list=ls(all.names = TRUE))
 filenames <- list.files(getwd(), pattern="*.txt")
 files <- lapply(filenames, readLines)
@@ -38,11 +37,10 @@ toSpace <- content_transformer(function(x, pattern) {
 ignore_text <- c(
   "※","◆","‧","推","噓","的","我","是","了","有",
   "用","在","沒","還","看","要","啦","多","上","說",
-  "真",
   "也","就","都","不","被","到","好","會","但","你",
   "跟","能","嗎","更","只","出","阿","是","吧","是",
   "這","為","啊","喔","又","和","很","過","再","因",
-  "和","標題","網址","什麼","看板","作者","可以",
+  "真","和","標題","網址","什麼","看板","作者","可以",
   "發信站","批踢踢實業坊","[a-zA-Z]")
 for(ignore in ignore_text){
   docs<- tm_map(docs, toSpace, ignore)
@@ -53,11 +51,9 @@ docs <- tm_map(docs, removePunctuation)
 docs <- tm_map(docs, removeNumbers)
 docs <- tm_map(docs, stripWhitespace)
 docs
-#
 
 ## 詞頻矩陣
 
-#
 mixseg = worker()
 jieba_tokenizer=function(d){
   unlist(segment(d[[1]],mixseg))
@@ -73,9 +69,8 @@ wordcloud(freqFrame$Var1,freqFrame$Freq,
           scale=c(6,0.5),min.freq=10,max.words=60,
           random.order=FALSE, random.color=FALSE, 
           rot.per=0, colors=brewer.pal(8, "Dark2"),
-          ordered.colors=FALSE,use.r.layout=FALSE,
+          ordered.colors=FALSE,useＷ.r.layout=FALSE,
           fixed.asp=TRUE)
-
 #　手機版想必手機這個字最多呢！
 
 ## 其他的文字雲
