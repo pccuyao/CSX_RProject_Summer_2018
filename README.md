@@ -22,3 +22,6 @@
 #### 學校 & 家裡
 * ggplot2 的 [練習](https://pccuyao.github.io/CSX_RProject_Summer_2018/week2/ggplot_ex1.html)
 * Wordcloud 的 [練習](https://pccuyao.github.io/CSX_RProject_Summer_2018/week2/Text_Ex.html)
+### 第三周
+#### 學校
+* EDM 的 [練習](https://pccuyao.github.io/CSX_RProject_Summer_2018/week3/Olympic_120.html)
