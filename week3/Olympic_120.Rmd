@@ -8,7 +8,9 @@ output: html_document
 > 這個練習主要使用120年來奧運(冬夏)的資料來做練習。
 
 * 資料來源: [https://www.kaggle.com/heesoo37/120-years-of-olympic-history-athletes-and-results](https://www.kaggle.com/heesoo37/120-years-of-olympic-history-athletes-and-results)
+
 ## 載入 Library
+
 ```{r}
 library(ggplot2)
 ```
@@ -17,6 +19,32 @@ library(ggplot2)
 ```{r}
 rn <- read.csv("athlete_events.csv")
 ```
+## 稍微瀏覽一下~
+
+```{r}
+head(rn)
+```
+
+## 欄位名稱
+
+欄位 | 名稱 | 類別 |
+-----|------|------|
+ID | 行號 | integer|
+Name |運動員姓名 | factor|
+Sex |男或女 | factor|
+Age |年齡 |integer|
+Height |身高(公分)| integer|
+Weight |體重(公斤)| numeric|
+Team |團隊名稱 | numeric|
+NOC |國家奧委會三字母代碼 | factor|
+Games |年分與季度 | factor|
+Year |年| factor|
+Season |夏季或冬季 | factor|
+City |主辦城市 | factor|
+Sport |比賽運動 | factor|
+Event |比賽項目 | factor|
+Medal |金、銀、銅或NA | factor|
+
 ## 建立BMI
 ```{r}
 rn$BMI <- rn$Weight / ((rn$Height/100)^2)
@@ -31,7 +59,8 @@ rn_F_n<-subset(rn_F,BMI != "NA")
 ## 歷年來男女的BMI平均值
 ```{r}
 mean_rn_f<-data.frame(trt = c("M","F"), outcome = c(mean(rn_M_n$BMI), mean(rn_F_n$BMI)))
-ggplot(mean_rn_f, aes(trt, outcome)) + geom_col(width = 0.5)
+mean_rn_f
+ggplot(mean_rn_f, aes(trt, outcome)) + geom_col(width = 0.9)
 
 ```
 
