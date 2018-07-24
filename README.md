@@ -23,5 +23,11 @@
 * ggplot2 的 [練習](https://pccuyao.github.io/CSX_RProject_Summer_2018/week2/ggplot_ex1.html)
 * Wordcloud 的 [練習](https://pccuyao.github.io/CSX_RProject_Summer_2018/week2/Text_Ex.html)
 ### 第三周
-#### 學校
-* EDM 的 [練習](https://pccuyao.github.io/CSX_RProject_Summer_2018/week3/Olympic_120.html)
+#### 學校 & 家裡
+* EDM 的 [練習]
+(https://pccuyao.github.io/CSX_RProject_Summer_2018/week3/Olympic_120.html)
+* TFIDF-PCA-KMeans 的 [練習](https://pccuyao.github.io/CSX_RProject_Summer_2018/week3/TFIDF_PDA_KMENAS.html)
+> 這周買了兩本R的書！
+#### 購書與閱讀
+* [R 資料科學](http://www.books.com.tw/products/0010765714)
+* [R 錦囊妙計](http://www.books.com.tw/products/0010624153)
