@@ -133,6 +133,9 @@ $(document).ready(function () {
 <blockquote>
 <p>這個練習主要使用120年來奧運(冬夏)的資料來做練習。</p>
 </blockquote>
+<blockquote>
+<p>本練習僅使用網站的資料與導入code，其他的分析完全由自己發展。</p>
+</blockquote>
 <ul>
 <li>資料來源: <a href="https://www.kaggle.com/heesoo37/120-years-of-olympic-history-athletes-and-results" class="uri">https://www.kaggle.com/heesoo37/120-years-of-olympic-history-athletes-and-results</a></li>
 </ul>
@@ -168,14 +171,14 @@ library(knitr)</code></pre>
 <h2>稍微瀏覽一下~</h2>
 <pre class="r"><code>head(rn)</code></pre>
 <pre><code>## # A tibble: 6 x 15
-##   ID    Name  Sex     Age Height Weight Team  NOC   Games  Year Season
-##   &lt;chr&gt; &lt;chr&gt; &lt;fct&gt; &lt;int&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;fct&gt; 
-## 1 1     A Di~ M        24    180     80 China CHN   1992~  1992 Summer
-## 2 2     A La~ M        23    170     60 China CHN   2012~  2012 Summer
-## 3 3     Gunn~ M        24     NA     NA Denm~ DEN   1920~  1920 Summer
-## 4 4     Edga~ M        34     NA     NA Denm~ DEN   1900~  1900 Summer
-## 5 5     Chri~ F        21    185     82 Neth~ NED   1988~  1988 Winter
-## 6 5     Chri~ F        21    185     82 Neth~ NED   1988~  1988 Winter
+##   ID    Name     Sex     Age Height Weight Team   NOC   Games  Year Season
+##   &lt;chr&gt; &lt;chr&gt;    &lt;fct&gt; &lt;int&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;fct&gt; 
+## 1 1     A Dijia~ M        24    180     80 China  CHN   1992~  1992 Summer
+## 2 2     A Lamusi M        23    170     60 China  CHN   2012~  2012 Summer
+## 3 3     Gunnar ~ M        24     NA     NA Denma~ DEN   1920~  1920 Summer
+## 4 4     Edgar L~ M        34     NA     NA Denma~ DEN   1900~  1900 Summer
+## 5 5     Christi~ F        21    185     82 Nethe~ NED   1988~  1988 Winter
+## 6 5     Christi~ F        21    185     82 Nethe~ NED   1988~  1988 Winter
 ## # ... with 4 more variables: City &lt;chr&gt;, Sport &lt;chr&gt;, Event &lt;chr&gt;,
 ## #   Medal &lt;fct&gt;</code></pre>
 </div>
@@ -276,14 +279,14 @@ library(knitr)</code></pre>
 <h2>重新檢視，可以看出多出了BMI</h2>
 <pre class="r"><code>head(rn)</code></pre>
 <pre><code>## # A tibble: 6 x 16
-##   ID    Name  Sex     Age Height Weight Team  NOC   Games  Year Season
-##   &lt;chr&gt; &lt;chr&gt; &lt;fct&gt; &lt;int&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;fct&gt; 
-## 1 1     A Di~ M        24    180     80 China CHN   1992~  1992 Summer
-## 2 2     A La~ M        23    170     60 China CHN   2012~  2012 Summer
-## 3 3     Gunn~ M        24     NA     NA Denm~ DEN   1920~  1920 Summer
-## 4 4     Edga~ M        34     NA     NA Denm~ DEN   1900~  1900 Summer
-## 5 5     Chri~ F        21    185     82 Neth~ NED   1988~  1988 Winter
-## 6 5     Chri~ F        21    185     82 Neth~ NED   1988~  1988 Winter
+##   ID    Name     Sex     Age Height Weight Team   NOC   Games  Year Season
+##   &lt;chr&gt; &lt;chr&gt;    &lt;fct&gt; &lt;int&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;fct&gt; 
+## 1 1     A Dijia~ M        24    180     80 China  CHN   1992~  1992 Summer
+## 2 2     A Lamusi M        23    170     60 China  CHN   2012~  2012 Summer
+## 3 3     Gunnar ~ M        24     NA     NA Denma~ DEN   1920~  1920 Summer
+## 4 4     Edgar L~ M        34     NA     NA Denma~ DEN   1900~  1900 Summer
+## 5 5     Christi~ F        21    185     82 Nethe~ NED   1988~  1988 Winter
+## 6 5     Christi~ F        21    185     82 Nethe~ NED   1988~  1988 Winter
 ## # ... with 5 more variables: City &lt;chr&gt;, Sport &lt;chr&gt;, Event &lt;chr&gt;,
 ## #   Medal &lt;fct&gt;, BMI &lt;dbl&gt;</code></pre>
 </div>

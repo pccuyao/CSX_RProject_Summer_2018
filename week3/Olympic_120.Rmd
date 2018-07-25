@@ -6,6 +6,7 @@ output: html_document
 ---
 # EDA 練習
 > 這個練習主要使用120年來奧運(冬夏)的資料來做練習。
+
 > 本練習僅使用網站的資料與導入code，其他的分析完全由自己發展。
 
 * 資料來源: [https://www.kaggle.com/heesoo37/120-years-of-olympic-history-athletes-and-results](https://www.kaggle.com/heesoo37/120-years-of-olympic-history-athletes-and-results)
