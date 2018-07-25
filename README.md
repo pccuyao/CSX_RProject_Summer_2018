@@ -30,3 +30,6 @@
 #### 購書與閱讀
 * [R 資料科學](http://www.books.com.tw/products/0010765714)
 * [R 錦囊妙計](http://www.books.com.tw/products/0010624153)
+### 第四周
+#### 學校
+* EDM 的深入、結合一些統計的 [練習](https://pccuyao.github.io/CSX_RProject_Summer_2018/week4/EDA_Advanced.html)
