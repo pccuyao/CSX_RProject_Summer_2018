@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1533107828358.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "CA84EB7A",
+    "lastKnownWriteTime" : 2482448084909518882,
+    "last_content_update" : 1533107828358,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "5150A7CA",
+        "caption" : "faithful",
+        "contentUrl" : "grid_resource/gridviewer.html?env=package%3Adatasets&obj=faithful&cache_key=5150A7CA",
+        "displayedObservations" : "272",
+        "environment" : "package:datasets",
+        "object" : "faithful",
+        "preview" : "0",
+        "totalObservations" : "272",
+        "variables" : "2"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

@@ -1,0 +1,12 @@
+name: Practice_Shiny
+title: Practice_Shiny
+username:
+account: pccuyao
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 393011
+bundleId: 1510968
+url: https://pccuyao.shinyapps.io/Practice_Shiny/
+when: 1533102535.11728
+asMultiple: FALSE
+asStatic: FALSE

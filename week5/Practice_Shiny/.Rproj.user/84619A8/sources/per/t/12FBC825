@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1533105983099.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2655020070",
+    "id" : "12FBC825",
+    "lastKnownWriteTime" : 1532482043,
+    "last_content_update" : 1532482043,
+    "path" : "~/Github/Example/week3/Olympic_120.R",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "81,60",
+        "scrollLine" : "72"
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
