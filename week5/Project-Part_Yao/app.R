@@ -18,6 +18,10 @@ library(showtext)
     }
   # Data
     Y_UN_YTOTAL <-read.csv("Data_Yao/Y_UN_YEAR_TOTAL.csv")
+    Y_UN_YALL <-read.csv("Data_Yao/Y_UN_YEAR_ALL.csv")
+    Y_UN_YALL_g <-gather(Y_UN_YALL[,-2],age, age_un,-c(YEAR))
+    Y_UN_YALL_g[,2]<-gsub("AGE.","",Y_UN_YALL_g[,2])
+    Y_UN_YALL_g[,2]<-gsub(".To.","~",Y_UN_YALL_g[,2])
     Y_UN_WHY <-read.csv("Data_Yao/Y_UN_WHY.csv", header=T, sep=",")
     colnames(Y_UN_WHY) = c("YEARS","AGE","初次工作","業務緊縮或歇業","對工作不滿意","健康不良","季節或臨時結束","女性結婚或生育","退休","家務太忙","其他")
     Y_UN_WHY_g <-gather(Y_UN_WHY,why, why_un,-c(AGE,YEARS))
@@ -60,7 +64,8 @@ ui <-
             ),
             mainPanel
             (
-              plotOutput("Y_UN_YTOTAL_O")
+              plotOutput("Y_UN_YTOTAL_O"),
+              plotOutput("Y_UN_YALL_O")
             )
           )
         ),
@@ -111,9 +116,7 @@ ui <-
                 choices = levels(factor(Y_UN_EDU_g[,3])),
                 selected = levels(factor(Y_UN_EDU_g[,3]))[1]
               ),
-
               plotOutput("Y_UN_EDU_O")
-
         )
       )
     )
@@ -148,14 +151,24 @@ server <- function(input, output)
   output$Y_UN_YTOTAL_O_T <-renderText(
     {
       paste(
+        "青年(15~29歲)失業人口資料\n",
         "民國:",input$Y_UN_YTOTAL_I,"年\n",
-        "總人口:",Y_UN_YTOTAL[input$Y_UN_YTOTAL_I -81,2],"(千人)\n",
-        "男性人口:",Y_UN_YTOTAL[input$Y_UN_YTOTAL_I -81,3],"(千人)\n",
-        "女性人口:",Y_UN_YTOTAL[input$Y_UN_YTOTAL_I -81,4],"(千人)\n"
+        "青年失業總人口:",Y_UN_YTOTAL[input$Y_UN_YTOTAL_I -81,2],"(千人)\n",
+        "青年男性失業人口:",Y_UN_YTOTAL[input$Y_UN_YTOTAL_I -81,3],"(千人)\n",
+        "青年女性失業人口:",Y_UN_YTOTAL[input$Y_UN_YTOTAL_I -81,4],"(千人)\n",
+        "全國失業總人口:",Y_UN_YALL[input$Y_UN_YTOTAL_I -81,2],"(千人)\n",
+        "青年失業率佔全國：",round(((Y_UN_YTOTAL[input$Y_UN_YTOTAL_I -81,2]/Y_UN_YALL[input$Y_UN_YTOTAL_I -81,2])*100),digits=3),"%"
       )
     }
   )
-
+  output$Y_UN_YALL_O <-renderPlot({
+    ggplot(data=subset(Y_UN_YALL_g[],Y_UN_YALL_g[,1]==input$Y_UN_YTOTAL_I),aes(x=YEAR,y=age_un,fill=age)) +
+      geom_bar(stat = "identity") +
+      coord_polar("y", start=0)+
+      scale_x_continuous(breaks=c(0,0,0))+
+      labs(x=paste("民國 ",input$Y_UN_YTOTAL_I,"年"),y="人數(千人)",title = paste("民國",input$Y_UN_YTOTAL_I,"年失業人口各年齡結構\n\n單位：千人"))
+    }
+  )
   #失業原因歷年統計------------------------------------------------------------------------------------------
   output$Y_UN_WHY_O <- renderPlot(
     {
