@@ -162,11 +162,12 @@ server <- function(input, output)
     }
   )
   output$Y_UN_YALL_O <-renderPlot({
-    ggplot(data=subset(Y_UN_YALL_g[],Y_UN_YALL_g[,1]==input$Y_UN_YTOTAL_I),aes(x=YEAR,y=age_un,fill=age)) +
+    g<-ggplot(data=subset(Y_UN_YALL_g[],Y_UN_YALL_g[,1]==input$Y_UN_YTOTAL_I),aes(x=YEAR,y=age_un,fill=age)) +
       geom_bar(stat = "identity") +
       coord_polar("y", start=0)+
       scale_x_continuous(breaks=c(0,0,0))+
       labs(x=paste("民國 ",input$Y_UN_YTOTAL_I,"年"),y="人數(千人)",title = paste("民國",input$Y_UN_YTOTAL_I,"年失業人口各年齡結構\n\n單位：千人"))
+    PlotThroughShowtext(g)
     }
   )
   #失業原因歷年統計------------------------------------------------------------------------------------------
@@ -247,7 +248,7 @@ server <- function(input, output)
       Y_UN_EDU_Data_Y <-subset(Y_UN_EDU_g,!Y_UN_EDU_g$AGE == "TOTAL")
       Y_UN_EDU_Data_Y <-subset(Y_UN_EDU_Data_Y,Y_UN_EDU_Data_Y$edu == input$Y_UN_EDU_I_S)
       Y_UN_EDU_Data_Y <-subset(Y_UN_EDU_Data_Y[,-3])
-      ggplot() + 
+      g<-ggplot() + 
         #直條圖
          geom_bar(data=Y_UN_EDU_Data_Y,aes(x= YEAR, y= edu_un, fill=AGE,alpha=12),stat="identity",position = position_stack(reverse = TRUE))+
         # 線
@@ -261,10 +262,10 @@ server <- function(input, output)
         #刻度
         scale_x_continuous(breaks=Y_UN_EDU_Data_X$YEAR)+
         scale_y_continuous(breaks=seq(min(Y_UN_EDU_g$edu_un),max(Y_UN_EDU_g$edu_un),as.integer((max(Y_UN_EDU_g$edu_un)-min(Y_UN_EDU_g$edu_un))/25))) +
-        labs(x="年(民國)",y="人數(人)",title = paste(input$Y_UN_WHY_I_S," 的歷年失業與教育人數統計\n\n單位：人"))+
+        labs(x="年(民國)",y="人數(人)",title = "民國100~106年\n\n歷年失業與教育人數統計\n\n單位：人")+
         #關閉圖示
         guides(alpha=FALSE)
-         
+      PlotThroughShowtext(g)
     }
   )
 }

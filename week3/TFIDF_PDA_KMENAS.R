@@ -29,7 +29,7 @@ if(Start == TRUE){
   curlSetOpt(cookie="over18=1", followlocation = TRUE, curl=curl)
   # 目標：C_Chat 版
   theme <- c("C_Chat") 
-  # 範圍：2018/7/17~2018/7/24 16476:16611 16523:16541
+  # 範圍：2018/7/17~2018/7/24
   for( i in 16476:16611){ 
     tmp <- paste(as.character(i), '.html', sep='')
     url <- paste0('https://www.ptt.cc/bbs/',theme,'/index', tmp)
