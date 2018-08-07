@@ -244,7 +244,7 @@ server <- function(input, output)
         geom_line(data=Y_UN_EDU_Data_X,aes(x= YEAR,y = Y_UN_EDU_Data_X[,5],group = 4,color="高職")) +
         geom_line(data=Y_UN_EDU_Data_X,aes(x= YEAR,y = Y_UN_EDU_Data_X[,6],group = 5,color="專科")) +
         geom_line(data=Y_UN_EDU_Data_X,aes(x= YEAR,y = Y_UN_EDU_Data_X[,7],group = 6,color="大學")) +
-        geom_line(data=Y_UN_EDU_Data_X,aes(x= YEAR,y = testa[,8],group = 7,color="研究所"))+
+        geom_line(data=Y_UN_EDU_Data_X,aes(x= YEAR,y = Y_UN_EDU_Data_X[,8],group = 7,color="研究所"))+
         #刻度
         scale_x_continuous(breaks=Y_UN_EDU_Data_X$YEAR)+
         scale_y_continuous(breaks=seq(min(Y_UN_EDU_g$edu_un),max(Y_UN_EDU_g$edu_un),as.integer((max(Y_UN_EDU_g$edu_un)-min(Y_UN_EDU_g$edu_un))/25))) +
