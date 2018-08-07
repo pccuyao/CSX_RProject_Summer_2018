@@ -5,8 +5,9 @@ account: pccuyao
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 393011
-bundleId: 1510968
+bundleId: 1522723
 url: https://pccuyao.shinyapps.io/Practice_Shiny/
-when: 1533102535.11728
+when: 1533645814.01567
 asMultiple: FALSE
 asStatic: FALSE
+ignoredFiles: .RData|AGE_EDU.csv|AGE_EDU.xlsx|AGE_WHY.xlsx|ROC_82-106_UNEMPLOYMENT.csv|ROC_82-106_UNEMPLOYMENT2.csv|wqy-zenhei.ttc
