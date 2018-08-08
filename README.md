@@ -33,3 +33,12 @@
 ### 第四周
 #### 學校
 * EDM 的深入、結合一些統計的 [練習](https://pccuyao.github.io/CSX_RProject_Summer_2018/week4/EDA_Advanced.html)
+### 第五周
+#### 學校
+* 叡揚資訊演講
+* Shiny [練習](https://github.com/pccuyao/CSX_RProject_Summer_2018/blob/master/week5/Practice_Shiny/app.R)
+#### 家裡
+* 期末呈現分檔製作
+### 第六周
+#### 期末呈現
+* 正式 [Final Project](https://claire-liu.shinyapps.io/YouthEmployment/)
