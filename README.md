@@ -42,3 +42,4 @@
 ### 第六周
 #### 期末呈現
 * 正式 [Final Project](https://claire-liu.shinyapps.io/YouthEmployment/)
+* 正式 Final Project 的[簡報](https://docs.google.com/presentation/d/1Jp7PeDjWLMxoYbdR-pp-7UQUR-UNukl1DFnpWUTajdU/edit?usp=sharing)
