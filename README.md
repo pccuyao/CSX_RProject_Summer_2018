@@ -8,7 +8,7 @@
 ## 期末呈現
 ### 主題：臺灣青年就業環境狀況探討
 * 前往 [Final Project](https://claire-liu.shinyapps.io/YouthEmployment/)
-* 前往 Final Project 的[簡報](https://docs.google.com/presentation/d/1Jp7PeDjWLMxoYbdR-pp-7UQUR-UNukl1DFnpWUTajdU/edit?usp=sharing)
+* 前往 Final Project 的 [簡報](https://docs.google.com/presentation/d/1Jp7PeDjWLMxoYbdR-pp-7UQUR-UNukl1DFnpWUTajdU/edit?usp=sharing)
 ### 小組名單
 | 學校 | 學系 | 年級 | 姓名 | 負責項目 |
 |-----|------|-----|------|--------|
@@ -53,4 +53,4 @@
 ### 第六周
 #### 期末呈現
 * 正式 [Final Project](https://claire-liu.shinyapps.io/YouthEmployment/)
-* 正式 Final Project 的[簡報](https://docs.google.com/presentation/d/1Jp7PeDjWLMxoYbdR-pp-7UQUR-UNukl1DFnpWUTajdU/edit?usp=sharing)
+* 正式 Final Project 的 [簡報](https://docs.google.com/presentation/d/1Jp7PeDjWLMxoYbdR-pp-7UQUR-UNukl1DFnpWUTajdU/edit?usp=sharing)
