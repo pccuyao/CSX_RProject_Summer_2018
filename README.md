@@ -12,7 +12,7 @@
 ### 小組名單
 | 學校 | 學系 | 年級 | 姓名 | 負責項目 |
 |-----|------|-----|------|--------|
-|台北醫學大學|保健營養學系|二|[嚴妮](https://github.com/nicoleyen/ex1)|創業、青年勞工調查|
+|台北醫學大學|保健營養學系|二|[嚴婗](https://github.com/nicoleyen/ex1)|創業、青年勞工調查|
 |國立台灣師範大學|科技應用與人力資源發展學系|四|[劉于瑄](https://github.com/yuly830914/CSX_RProject)|就業、程式碼整合|
 |中國文化大學|音樂學系|二|[姚承佑](https://github.com/pccuyao/CSX_RProject_Summer_2018)|失業|
 > 點擊姓名以前往該同學GitHub
