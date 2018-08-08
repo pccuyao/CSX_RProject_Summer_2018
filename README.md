@@ -38,7 +38,7 @@
 * 叡揚資訊演講
 * Shiny [練習](https://github.com/pccuyao/CSX_RProject_Summer_2018/blob/master/week5/Practice_Shiny/app.R)
 #### 家裡
-* 期末呈現分檔製作
+* 期末呈現[分檔](https://github.com/pccuyao/CSX_RProject_Summer_2018/blob/master/week5/Project-Part_Yao/app.R)製作
 ### 第六周
 #### 期末呈現
 * 正式 [Final Project](https://claire-liu.shinyapps.io/YouthEmployment/)
