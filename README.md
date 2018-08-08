@@ -17,13 +17,6 @@
 |中國文化大學|音樂學系|二|[姚承佑](https://github.com/pccuyao/CSX_RProject_Summer_2018)|失業|
 > 點擊姓名以前往該同學GitHub
 ## 學習進度
-* 目錄
-* [第一週](###第一週)：github、R
-* [第二週](###第二週)：ggplot2、wordcluds
-* [第三週](###第三週)：EDM、TFIDF、PCA、KMeans
-* [第四週](###第四週)：EDM_advanced
-* [第五週](###第五週)：Shiny
-* [第六週](###第六週)：Final
 ### 第一週
 #### 學校
 * 第一次了解與建立環境
