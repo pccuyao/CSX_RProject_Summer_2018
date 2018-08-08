@@ -9,6 +9,7 @@
 ### 主題：臺灣青年就業環境狀況探討
 * 前往 [Final Project](https://claire-liu.shinyapps.io/YouthEmployment/)
 * 前往 Final Project 的 [簡報](https://docs.google.com/presentation/d/1Jp7PeDjWLMxoYbdR-pp-7UQUR-UNukl1DFnpWUTajdU/edit?usp=sharing)
+* 前往 Final Project 的 [原始碼](https://github.com/pccuyao/CSX_RProject_Summer_2018/tree/master/week6/YouthEmployment)
 ### 小組名單
 | 學校 | 學系 | 年級 | 姓名 | 負責項目 |
 |-----|------|-----|------|--------|
@@ -27,32 +28,33 @@
 * 第一次的 RMarkDown [homework-1](https://pccuyao.github.io/CSX_RProject_Summer_2018/week1/hw1.html)
 * RMarkDown 的 [練習](https://pccuyao.github.io/CSX_RProject_Summer_2018/week1/RMARK_EXER.html)
 #### 家裡
-* 持續的完成本周的指派的 Task -> 繼續在 DataCamp 上的學習。
+* 持續的完成本週的指派的 Task -> 繼續在 DataCamp 上的學習。
 * 持續的編寫有關 RMarkDwon 的學習[紀錄](https://pccuyao.github.io/CSX_RProject_Summer_2018/week1/RMARK_EXER.html)。(與上方RMarkdown 的 **練習** 是同一檔案。)
-### 第二周
+### 第二週
 #### 學校 & 家裡
 * ggplot2 的 [練習](https://pccuyao.github.io/CSX_RProject_Summer_2018/week2/ggplot_ex1.html)
 * Wordcloud 的 [練習](https://pccuyao.github.io/CSX_RProject_Summer_2018/week2/Text_Ex.html)
-### 第三周
+### 第三週
 #### 學校 & 家裡
 * EDM 的 [練習](https://pccuyao.github.io/CSX_RProject_Summer_2018/week3/Olympic_120.html)
 * TFIDF-PCA-KMeans 的 [練習](https://pccuyao.github.io/CSX_RProject_Summer_2018/week3/TFIDF_PDA_KMENAS.html)
-> 這周買了兩本R的書！
+> 這週買了兩本R的書！
 #### 購書與閱讀
 * [R 資料科學](http://www.books.com.tw/products/0010765714)
 * [R 錦囊妙計](http://www.books.com.tw/products/0010624153)
-### 第四周
+### 第四週
 #### 學校
 * EDM 的深入、結合一些統計的 [練習](https://pccuyao.github.io/CSX_RProject_Summer_2018/week4/EDA_Advanced.html)
 #### 家裡
 * 開始與小組討論期末呈現的製作
-### 第五周
+### 第五週
 #### 學校
 * 叡揚資訊演講
 * Shiny [練習](https://github.com/pccuyao/CSX_RProject_Summer_2018/blob/master/week5/Practice_Shiny/app.R)
 #### 家裡
 * 期末呈現[分檔](https://github.com/pccuyao/CSX_RProject_Summer_2018/blob/master/week5/Project-Part_Yao/app.R)製作
-### 第六周
+### 第六週
 #### 期末呈現
 * 正式 [Final Project](https://claire-liu.shinyapps.io/YouthEmployment/)
 * 正式 Final Project 的 [簡報](https://docs.google.com/presentation/d/1Jp7PeDjWLMxoYbdR-pp-7UQUR-UNukl1DFnpWUTajdU/edit?usp=sharing)
+* 正式 Final Project 的 [原始碼](https://github.com/pccuyao/CSX_RProject_Summer_2018/tree/master/week6/YouthEmployment)
