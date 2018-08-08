@@ -44,6 +44,8 @@
 ### 第四周
 #### 學校
 * EDM 的深入、結合一些統計的 [練習](https://pccuyao.github.io/CSX_RProject_Summer_2018/week4/EDA_Advanced.html)
+#### 家裡
+* 開始與小組討論期末呈現的製作
 ### 第五周
 #### 學校
 * 叡揚資訊演講
