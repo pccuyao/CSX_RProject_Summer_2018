@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1533690392611.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "37C02876",
+    "lastKnownWriteTime" : 1533692081,
+    "last_content_update" : 1533692081329,
+    "path" : "~/Github/Example/week5/Project-Part_Yao/app.R",
+    "project_path" : "app.R",
+    "properties" : {
+        "cursorPosition" : "281,41",
+        "scrollLine" : "238"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
