@@ -5,6 +5,17 @@
 * 我目前就讀中國文化大學音樂學系，二年級。
 * 第一次接觸 R語言 與 資料科學類的程式設計，希望除了能夠跟得上課程外，也能夠學習到東西。
 * 請多多指教！
+## 期末呈現
+### 主題：臺灣青年就業環境狀況探討
+* 前往 [Final Project](https://claire-liu.shinyapps.io/YouthEmployment/)
+* 前往 Final Project 的[簡報](https://docs.google.com/presentation/d/1Jp7PeDjWLMxoYbdR-pp-7UQUR-UNukl1DFnpWUTajdU/edit?usp=sharing)
+### 小組名單
+| 學校 | 學系 | 年級 | 姓名 | 負責項目 |
+|-----|------|-----|------|--------|
+|台北醫學大學|保健營養學系|二|[嚴妮](https://github.com/nicoleyen/ex1)|創業、青年勞工調查|
+|國立台灣師範大學|科技應用與人力資源發展學系|四|[劉于瑄](https://github.com/yuly830914/CSX_RProject)|就業、程式碼整合|
+|中國文化大學|音樂學系|二|[姚承佑](https://github.com/pccuyao/CSX_RProject_Summer_2018)|失業|
+> 點擊姓名以前往該同學GitHub
 ## 學習進度
 ### 第一週
 #### 學校
